@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>时间定点展示</title>
+    <style type="text/css" media="screen">
+    div {
+        margin: 100px;
+    }
+    
+    div img {
+        position: relative;
+        top: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="img/0.png">
+        <img src="img/0.png">
+        <img src="img/second1.png">
+        <img src="img/0.png">
+        <img src="img/0.png">
+        <img src="img/second1.png">
+        <img src="img/0.png">
+        <img src="img/0.png">
+    </div>
+    <script type="text/javascript">
+    var oImg = document.getElementsByTagName('img');
+    var oldStr = '';
+    change();
+    setInterval(change, 30);
+
+    function change() {
+        var oDate = new Date();
+        var oH = oDate.getHours();
+        var oM = oDate.getMinutes();
+        var oS = oDate.getSeconds();
+        //时间化为显示的格式
+        var str = toZero(oH) + ':' + toZero(oM) + ':' + toZero(oS);
+        for (var i = oImg.length - 1; i >= 0; i--) {
+            if (i != 2 && i != 5) {
+                oImg[i].src = 'img/' + str.charAt(i) + '.png';
+            }
+        }
+
+        //摆动的效果
+        for (var i = str.length - 1; i >= 0; i--) {
+            if (str.charAt(i) != oldStr.charAt(i)) {
+            	shake(oImg[i]);
+            }
+        }
+
+        //重新设置旧字符串的值
+        oldStr=str;
+    }
+    //将时分秒化都为两个字符组成的字符串
+    function toZero(num) {
+        if (num < 9) {
+            return '0' + num;
+        } else {
+            return '' + num;
+        }
+    }
+
+    //制作摇动的效果
+    function shake(img) {
+        //存放图片摆动的幅度，即上下摆多少px
+        var arr=[];
+        //增幅要求慢慢变大,且左右摆动
+        for (var i = 10; i > 0; i -= 2) {
+            arr.push(i);
+            arr.push(-i);
+        }
+        // 一开始是原位置的，为了效果好看
+        arr.push(0);
+        //设置arr数组中当前要摇晃的大小即arr[iNow]
+        var iNow = 0;
+        //开始设置延迟器去摇晃
+        var timer = setInterval(function() {
+            img.style.top = arr[iNow] + 'px';
+            iNow++;
+            if (iNow == arr.length) {
+                clearInterval(timer);
+            }
+        }, 30)
+    }
+    </script>
+</body>
+
+</html>

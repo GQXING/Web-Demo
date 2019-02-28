@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>延迟菜单</title>
+    <link rel="stylesheet" type="text/css" href="miaov_style.css">
+</head>
+<script type="text/javascript">
+window.onload = function() {
+	var aA=getByClass(document,'normal');
+	var aSpan=getByClass(document,'float_layer');
+	var timer=null;
+
+	for (var i = aA.length - 1; i >= 0; i--) {
+		aA[i].index=i;
+		aA[i].onmouseover=function () {
+			for (var i = aSpan.length - 1; i >= 0; i--) {
+				aSpan[i].style.display='none';
+			}
+
+			aSpan[this.index].style.display='block';
+			clearInterval(timer);
+		}
+
+		aA[i].onmouseout=function () {
+			var This=this;
+
+			timer=setTimeout(function () {
+				aSpan[This.index].style.display='none';
+			},1000);
+		}
+
+		aSpan[i].onmouseover=function () {
+			clearInterval(timer);
+		};
+
+		aSpan[i].onmouseout=function () {
+			var This=this;
+			timer=setTimeout(function () {
+				This.style.display='none';
+			},1000);
+		}
+
+	}
+
+
+    function getByClass(oParent, sClass) {
+        var aElem = oParent.getElementsByTagName('*');
+        var result = [];
+        //正则表达式
+        // '\' 表示转义
+        // \b 在正则里表示单词的边界位置
+        // 'i' 区分大小写
+        var re=new RegExp('\\b'+sClass+'\\b','i');
+        for (var i = aElem.length - 1; i >= 0; i--) {
+        	if (re.test(aElem[i].className)) {
+        		result.push(aElem[i]);
+        	}
+        }
+        return result;
+    }
+}
+</script>
+
+<body>
+    <div id="nav">
+        <div class="adorn1"></div>
+        <div class="adorn2"></div>
+        <ul>
+            <li>
+                <a class="normal" href="#"><span>首页</span></a>
+                <span class="float_layer w1 pos1">
+                <span class="arrows"></span>
+                <span class="decorate1"></span>
+                <span class="decorate2"></span>
+                <a href="#"><span>最近更新</span></a>
+                <a href="#"><span>活动</span></a>
+                <a href="#"><span>报名试听</span></a>
+                <a href="#"><span>学员反馈</span></a>
+                </span>
+            </li>
+            <li class="line">
+                <a class="normal" href="#"><span>关于我们</span></a>
+                <span class="float_layer w2 pos2">
+                <span class="arrows"></span>
+                <span class="decorate1"></span>
+                <span class="decorate2"></span>
+                <a href="#"><span>妙味讲师</span></a>
+                <a href="#"><span>培训方式</span></a>
+                <a href="#"><span>培训理念</span></a>
+                <a href="#"><span>联系我们</span></a>
+                </span>
+            </li>
+            <li class="line">
+                <a class="normal" href="#"><span>作品</span></a>
+                <span class="float_layer w3 pos3">
+                <span class="arrows"></span>
+                <span class="decorate1"></span>
+                <span class="decorate2"></span>
+                <a href="#"><span>般固</span></a>
+                <a href="#"><span>MATRIX</span></a>
+                <a href="#"><span>留学e网</span></a>
+                <a href="#"><span>ECMall</span></a>
+                </span>
+            </li>
+            <li class="line">
+                <a class="normal" href="#"><span>博客</span></a>
+                <span class="float_layer w4 pos4">
+                <span class="arrows"></span>
+                <span class="decorate1"></span>
+                <span class="decorate2"></span>
+                <a href="#"><span>JS教程</span></a>
+                <a href="#"><span>弹出层效果</span></a>
+                <a href="#"><span>3D球面标签云</span></a>
+                <a href="#"><span>Window计算器</span></a>
+                </span>
+            </li>
+        </ul>
+        <p><a href="#">>>更多</a></p>
+    </div>
+</body>
+
+</html>

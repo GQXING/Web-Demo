@@ -1,0 +1,7 @@
+mysql -uroot -proot      //第一个root为用户名   第二个root为密码
+show databases;
+create databse newstudent;
+show databases;
+use newstudent;
+//建表
+create table info(id int(3) not null auto_increment primary key,name varchar(15) not null,number int(9) not null unique,sex varchar(6) not null,department varchar(50) not null,birthplace varchar(50) not null,birthday varchar(25) not null,phone varchar(11) not null,qq varchar(10) not null,email varchar(30) not null,address varchar(30) not null,introduce text not null,target text not null,specialty text not null,time varchar(25) not null)charset=utf8;

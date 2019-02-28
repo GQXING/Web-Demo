@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <title>填写招新报名表-长大在线招新</title>
+    <script type="text/javascript" src="jquery-1.10.1.js"></script>
+    <link rel="stylesheet" href="./css/style.css"/>
+
+   
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <p class="browsehappy">你正在使用<strong>过时的</strong>浏览器！<a href="http://browsehappy.com/">去升级>></a></p>
+    <![endif]-->
+
+    <h2 class="brand" style="font-size: 16px;">2016春季招新<br><small>长大在线信息传媒YUOL</small><br/></h2>
+   
+    <h4>
+        <small>报名方式及相关问题：</small><p>1、 报名表填好后，请于3月25日18：00之前将报名表交到招新摆点处（13教前或风雨球场）或直接交到长大在线办公室（长江大学东校区11教6楼）；</p>
+        <p>
+            2、  如对招新有什么疑问，欢迎随时咨询我们（长大在线官Q：319265902）；
+        </p>
+        <p>
+            3、  欢迎加入长大在线15级招新群：523616490；
+        </p>
+        <p>
+            4、  我们将会以短信方式通知您面试时间、地点。
+        </p>
+
+    </h4>
+
+    <div class="form-wrapper">
+        <h4 class="form-title">招新报名表</h4>
+        <form action="php/add.php" id="cvsform" class="form-content" method="POST" role="form">
+            <div class="form-group">
+                姓名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="form-control input-text" value=""  name="name" id="name"  required aria-required="true" placeholder="亲，你的大名">
+                <label class="input-icon fui-user" for="name"></label>
+            </div>
+             <div class="form-group">
+                <p>
+                    学号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="form-control input-text" value=""  name="number" id="num"  required aria-required="true" placeholder="9位学号">
+                <label class="input-icon fui-user" for="name"></label>
+                </p>
+            </div>
+            <div class="form-group">
+               <p>
+                    性别：&nbsp;&nbsp;
+                <label class="radiosex" >
+                    <input type="radio" name="sex" id="sex-options1" value="男" data-toggle="radio" class="custom-radio" required aria-required="true">
+                    男
+                </label>
+                <label class="radiosex">
+                    <input type="radio" name="sex" id="sex-options2" value="女" data-toggle="radio" class="custom-radio" required aria-required="true">
+                    女
+                </label>
+               </p>
+            </div>
+
+             <div class="form-group">
+                <p>
+                    出生年月：&nbsp;<input type="text" class="form-control input-text"  name="birthday" id="weibo" placeholder="如：2000年1月">
+                </p>
+            </div>
+
+             <div class="form-group">
+                籍贯：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="form-control input-text"   name="birthplace" id="birthplace" placeholder="如：湖北荆州">
+            </div>
+            <div class="form-group">
+                <p>
+                     院系班级:&nbsp;&nbsp;<input type="text" class="form-control input-text" value="" name="college" id="college" required aria-required="true" placeholder="如：计科院软工11401班"style="width:60%;">
+                <label class="input-icon fui-list" for="college"></label>
+                </p>
+            </div>
+            <div class="form-group">
+               <p>
+                    手机号码:&nbsp;&nbsp;<input type="tel" class="form-control input-text" value="" placeholder="手机号码，很重要" id="phone" name="phone" required aria-required="true">
+               </p>
+
+            </div>
+            <div class="form-group">
+                <p>
+                    QQ号：&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="form-control input-text"  placeholder="小编QQ：319265902" name="qq" id="qq">
+                </p>
+            </div>
+            <div class="form-group">
+               <p>
+                    常用邮箱:&nbsp;&nbsp;&nbsp;<input type="email" class="form-control input-text" value="" placeholder="常用邮箱" name="email" id="email" required aria-required="true">
+               </p>
+            </div>
+            <div class="form-group">
+                <p>
+                    寝室住址:&nbsp;&nbsp;<input type="text" class="form-control input-text" value="" placeholder="如:南苑-18B-222" name="dormitory" id="dormitory" required aria-required="true">
+                </p>
+            </div>
+           
+            
+            <div class="form-group">
+                <div class="panel-title">组别意向</div>
+               
+                <label class="radio">
+                    <input type="radio" name="intention" id="group-options1" value="设计部" data-toggle="radio" class="custom-radio" required aria-required="true">
+                   
+                    设计部
+                </label>
+                <label class="radio">
+                    <input type="radio" name="intention" id="group-options2" value="编程部" data-toggle="radio" class="custom-radio" required aria-required="true">
+                    
+                    编程部
+                </label>
+                <label class="radio">
+                    <input type="radio" name="intention" id="group-options3" value="编辑部" data-toggle="radio" class="custom-radio" required aria-required="true">
+                   
+                    编辑部
+                </label>
+                
+                <label class="radio">
+                    <input type="radio" name="intention" id="group-options4" value="组宣部" data-toggle="radio" class="custom-radio" required aria-required="true">
+                   
+                    组宣部
+                </label>
+                  
+            </div>
+            <div class="form-group" id="group-intro"><p>切换组别以查看介绍</p></div>
+            <div class="form-group">
+                <textarea name="intro" id="intro" class="form-control" cols="30" rows="10" placeholder="请填写自我介绍，让我们认识你。你可以介绍你自己的经历，自己的理想，兴趣爱好以及特长等。"  required aria-required="true"></textarea>
+            </div>
+            <div class="form-group">
+                <textarea name="works" id="works" class="form-control" cols="30" rows="10" placeholder="请介绍自己做过的作品。你做过哪些网站，APP或是折腾过什么硬件？或者请描述一个你喜欢的网站或者APP并解释为什么喜欢（200字以内）"></textarea>
+            </div>
+            <div class="captcha-wrapper">
+                <img class="captcha-img"  alt="">
+                <img name="validate" onclick="validate.src+='?' + Math.random();"   
+              src="php/verification.php"  alt="点击刷新"> 
+
+                <div class="form-group">
+                    <input class="form-control input-text" id="captcha" name="captcha" type="text" required aria-required="true" aria-invalid="true" placeholder="请填写上图中的字符(点图可刷新)">
+                </div>
+
+            </div>
+            <button id="submitBtn" type="submit" name="submitBtn" >提交报名表</button>
+        </form>
+    </div>
+     <h3 style="font-size: 14px;">
+            <p>长大在线简介</p>
+            <p>长大在线信息传媒（YUOL info-teach Group,以下简称“长大在线”），组建于2003年11月，直属于长江大学党委宣传部，是一个专门从事网页设计、程序设计、网络营销、广告设计，活动策划和咨询培训等业务的学生团队。长大在线负责制作与维护长江大学新闻网、长江大学唯一大型综合门户网站——长大在线、长江大学唯一官方论坛——“百舸争流”BBS论坛，院系网站和专题网站等。</p>
+            <p>长大在线下设站长团和设计部、编程部、编辑部、组宣部四个部门。在各部门的分工和合作下，团队运作正常有序，正欣欣向荣地发展。</p>
+     </h3>
+    <footer class="footer center-block text-center">&copy; 长大在线信息传媒 YUOL</footer>
+            <script type="text/javascript">
+
+            
+            var btn=document.getElementById('submitBtn');
+           
+            btn.onclick=function(){
+
+                    
+
+
+                var nReg = /^[\u4E00-\u9FA5]{2,4}$/;
+                if (!nReg.test($("#name").val())) {
+                    alert("名字输入错误");
+                    return false; 
+                };
+
+                    if ($('input:radio[name="sex"]:checked').val() == null) {
+                    alert("请选择性别");
+                    return false;
+                     }
+
+                if( $("#college").val() == "")
+                    {
+                    alert("请输入院系班级！");
+                    return false;
+                    } ;
+
+                //判断单选框是否选中
+                
+               if(!$("#birthplace").val()){
+                            alert("请正确填写籍贯！");
+                            return false;
+                        } ;
+
+
+                var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))\d{8})$/; 
+                            if(!myreg.test($("#phone").val())) 
+                            {
+                                alert('请输入有效的手机号码！'); 
+                                return false; 
+                            } ;
+
+
+               //判断邮箱
+               var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/; //验证邮箱的正则表达式
+                        if(!reg.test($("#email").val()))
+                            {
+                                alert("邮箱格式不对");
+                                return false;
+                            };
+                 var mreg = /^((201[3-5]{1})\d{5})$/; 
+                            if(!mreg.test($("#num").val())) 
+                            {
+                                alert('请输入有效的学号！'); 
+                                return false; 
+                            } ;
+                if(!$("#qq").val()){
+                            alert("请正确填写qq！");
+                            return false;
+                        } ;
+               
+                if(!$("#dormitory").val()){
+                            alert("请正确填写寝室住址！");
+                            return false;
+                        } ;
+
+                 if(!$("#intro").val()){
+                            alert("请认真填写自我介绍！");
+                            return false;
+                        } ;
+
+                if ($('input:radio[name="intention"]:checked').val() == null) {
+                    alert("请选择组别！");
+                    return false;
+                     }
+       }
+
+        $('input').css('width','50%');
+        $('input').css('-moz-border-radius','10px');
+        $('input').css('-webkit-border-radius','10px');
+        $('input').css('-webkit-border-radius','10px');
+
+       
+
+        $("#group-options1").on("click touchend", function(e) {
+            $("#group-intro").html("负责制作学校各门户网站、专题网站，以及长大在线相关网站上的图片和flash的更新。设计部分ps网页设计、动画组、web前端开发三个方向。");
+        });
+
+        $("#group-options2").on("click touchend", function(e) {
+            $("#group-intro").html("负责网站系统的开发，服务器的管理和新技术的研发。编程部分PHP、网管、移动组（安卓/IOS）三个方向，PHP组主要从事动态网站的建设，数据库的管理，织梦和bbs的二次开发，在线后台，微信以及app后台的维护与开发；网管组主要从事黑客攻防及服务器的安全设置；移动组主要从事长大校园通app的开发及维护。");
+        });
+
+        $("#group-options3").on("click touchend", function(e) {
+            $("#group-intro").html("编辑部下设网编组、电子杂志组。网编组负责长大在线网站内容的更新和新闻策划，电子杂志组负责制作不同主题以及介绍长大在线成员的电子杂志。");
+        });
+
+        $("#group-options4").on("click touchend", function(e) {
+            $("#group-intro").html("负责各项规章制度的完善与执行，即负责例会的召开、例会和办公室值班的考勤、负责团队成员业绩的考核等，协助办公室主任管理团队经费的各项收支，负责活动的策划与组织等。与编辑部共同管理微信、微博以及官方QQ。");
+        });
+
+        </script>
+            
+
+</body>
+</html>

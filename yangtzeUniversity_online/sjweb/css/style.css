@@ -1,0 +1,497 @@
+
+body,div,ul,li,a{
+	margin:0;
+	padding:0;
+}
+/*
+    开始时最好把通用的全部表示其css样式，
+	以免单个设置过于繁琐；
+*/
+li,a,h1{
+	list-style:none;
+	text-decoration:none;
+}
+/*
+   当前目录下：.;
+   返回上一级目录:..;
+   加载图片的时候引用css文件要注意；
+     */
+body{
+	background:url(../img/1.png);
+	margin:0 0;
+    }
+#top{
+	width:100%;
+	height:35px;
+	background:url(../img/2.png) repeat-x;
+}
+
+.top_content{
+  width: 780px;
+  height: 35px;
+  margin: 0 auto;
+}
+#top{
+	line-height:35px;
+	color:white;
+}
+#time{
+  height: 35px;
+  width: 60px;
+   font-size:14px; }
+#picture{
+	width:780px;
+	height:200px;
+	margin:0 auto;
+	background:url(../img/banner.jpg);
+}
+#nav{
+	width:780px;
+    height:35px;
+	margin:0 auto;
+	background:url(../img/3.png) repeat-x;
+}
+#nav ul{
+	height:35px;
+	width:720px;
+	
+    margin:0 auto;
+}
+#nav ul li{
+	float:left;
+	height:35px;
+	line-height:35px;
+	width:120px;
+	text-align:center;
+}
+#nav a{
+	color:#FFF;
+}
+#nav ul li:hover{
+	background:#3c98c4;
+}
+#new{
+	height:15px;
+	width:780px;
+	margin:0 auto;
+	background:url(../img/4.png) repeat-x;	
+}
+#main{
+	
+	width:780px;
+	background:#FFF;
+	margin:0 auto;
+}
+#main1{
+	height:400px;
+	width:290px;
+	color:#FFF;
+	float:left;
+}
+#main1 #head1{
+	height:200px;
+	width:290px;
+	position:relative;
+}
+#main1 h1{
+	margin-top:0;
+	height:23px;
+	width:285px;
+}
+#main1 #photo{
+	width:280px;
+	height:155px;
+	margin-top:-9px;
+	background:url(../img/flash.gif);
+	
+	
+}
+
+#main1 #foot1 h1{
+	position:absolute;
+	height:37px;
+	width:290px;
+	background:url(../img/policy.jpg) no-repeat;
+}
+#main1 #foot1 a:hover{color:black;}
+#main1 #content1{
+	padding-top:23px;
+}
+#main1 #content1 li{
+	padding-top:0;
+	background:url(../img/dot.jpg) no-repeat 8px;
+	font-size:12px;
+	line-height:25px;
+	height:25px;
+	text-indent:25px;
+}
+
+#main1 #content1 li a{
+	color:#000;
+}
+#main1 #content1 li a:hover{
+	color:#F00;
+	text-decoration:underline;
+}
+
+
+#main1 #foot1 span{
+    line-height:23px;
+	font-size:12px;
+	position:relative;
+	left:240px;
+	top:1px;
+}
+#main1 #foot1 a{
+	color:#FFF;
+}
+	 	
+#main2{
+	height:400px;
+	width:290px;
+	background:#FFF;
+	float:left;
+}
+#main2 #head2{
+	height:200px;
+	width:290px;
+}
+#main2 h1{
+	margin-top:0;
+}
+
+	 
+#main2 #head2 h1{
+	position:absolute;
+	height:37px;
+	width:290px;
+	background:url(../img/dyn.jpg) no-repeat;
+}
+#main2 #head2 span{
+    line-height:23px;
+	font-size:12px;
+	position:relative;
+	left:240px;
+	top:1px;
+}
+#main2 #head2 a{
+	color:#FFF;
+}
+#main2 #head2 a:hover{color:black;}
+
+#main2 #content21{
+	padding-top:23px;
+}
+#main2 #head2 li{
+	padding-top:0;
+	background:url(../img/dot.jpg) no-repeat 8px;
+	font-size:12px;
+	line-height:25px;
+	height:25px;
+	text-indent:25px;
+}
+
+#main2 #head2 li a{
+	color:#000;
+}
+#main2 #head2 li a:hover{
+	color:#F00;
+	text-decoration:underline;
+}
+
+#main2 #foot2{
+	height:200px;
+	width:290px;
+}
+#main2 #foot2 h1{
+	position:absolute;
+	height:37px;
+	width:290px;
+	background:url(../img/news.jpg) no-repeat;
+}
+#main2 #foot2 a:hover{color:black;}
+#main2 #foot2 span{
+    line-height:23px;
+	font-size:12px;
+	position:relative;
+	left:240px;
+	top:1px;
+}
+#main2 #foot2 a{
+	color:#FFF;
+}
+
+#main2 #content22{
+	padding-top:23px;
+}
+#main2 #foot2 li{
+	padding-top:0;
+	background:url(../img/dot.jpg) no-repeat 8px;
+	font-size:12px;
+	line-height:25px;
+	height:25px;
+	text-indent:25px;
+}
+
+#main2 #foot2 li a{
+	color:#000;
+}
+#main2 #foot2 li a:hover{
+	color:#F00;
+	text-decoration:underline;
+}
+/*
+text-decoration:
+underline 	定义文本下的一条线。
+overline 	定义文本上的一条线。
+line-through 	定义穿过文本下的一条线。
+blink 	定义闪烁的文本。
+inherit 	规定应该从父元素继承 text-decoration 属性的值。
+*/
+
+#main3{
+	height:400px;
+	width:198px;
+	border: 1px solid gray;
+	background:#FFF;
+	float:right;
+	margin-bottom:10px;
+}
+#main3 #head3{
+	width:198px;
+	height:230px;
+}
+#main3 #head3 h1{
+	background:url(../img/notice.jpg);
+	width:198px;
+	height:37px;
+    position:absolute;
+	margin-top:0;
+}
+#main3 #head3 span{
+	position:relative;
+	left:160px;
+	top:3px;
+	line-height:23px;
+	font-size:12px;
+}
+#main3 #head3 h1 a{
+	color:#000;
+}
+#main3 #head3 a:hover{color:red;}
+
+#main3 #content31{
+	margin-top:0px;
+}
+#main3 #head3 ul{
+	padding-top:40px;
+}
+#main3 #head3 li{
+	padding-top:0px;
+	background:url(../img/speaker.jpg) no-repeat 8px;
+	font-size:12px;
+	line-height:23px;
+	height:23px;
+	text-indent:25px;
+}
+
+#main3 #head3 li a{
+	color:#000;
+}
+#main3 #head3 li a:hover{
+	color:#F00;
+	text-decoration:underline;
+}
+
+
+
+
+
+
+#main3 #foot2{
+	width:198px;
+	height:170px;
+}
+#main3 #foot3 h1{
+	background:url(../img/friend.jpg);
+	width:198px;
+	height:37px;
+    position:absolute;
+	margin-top:0;
+}
+#main3 #foot3 span{
+	position:relative;
+	left:160px;
+	top:3px;
+	line-height:23px;
+	font-size:12px;
+}
+#main3 #foot3 h1 a{
+	color:#000;
+}
+#main3 #foot3 a:hover{color:red;}
+
+#main3 #content32{
+	margin-top:0px;
+}
+#main3 #foot3 ul{
+	padding-top:40px;
+}
+#main3 #foot3 li{
+	padding-top:0px;
+	background:url(../img/triangle.jpg) no-repeat 8px;
+	font-size:12px;
+	line-height:22px;
+	height:22px;
+	text-indent:25px;
+}
+
+#main3 #foot3 li a{
+	color:#000;
+}
+#main3 #foot3 li a:hover{
+	color:#F00;
+	text-decoration:underline;
+}
+
+#bottom{
+	width:100%;
+	height:33px;
+	background:url(../img/5.png) repeat;
+	clear:both;
+}
+#bottom span{
+	line-height:33px;
+	margin-left:50px;
+	
+}
+#bottom #middle{
+	width: 679px;
+	height:33px;
+	margin:1px auto;
+}
+#bottom #middle a{
+	color:#FFF;
+    text-decoration: none;
+}
+#bottom #middle{
+	color:#FFF;
+}
+#bottom #middle a:hover{
+	color:#F00;
+}
+
+/**
+  当一个大的div内包含两个小div，大的div设置大小尺寸，小的就算高度超出，
+  下边也会浮动上去。
+  如：
+  <html>
+<head>
+<title>clear</title>
+<style>
+#all{
+width:400px;
+height:200px;
+overflow:hidden;
+
+overflow:visible	默认值。内容不会被修剪，会呈现在元素框之外。
+hidden	内容会被修剪，并且其余内容是不可见的。
+scroll	内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+auto	如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。
+inherit	规定应该从父元素继承 overflow 属性的值。
+
+}
+#redBlock{
+          height:200px;
+		  width:200px;
+		  background:red;
+		  float:left;
+		  }
+#blueBlock{
+          height:250px;
+		  width:200px;
+		  background:blue;
+		  float:left;
+		  }
+.clearfix{clear:both;} 
+#greenBlock{
+          height:200px;
+		  width:400px;
+		  background:green;
+		  }
+</style>
+</head>
+<body>
+<div id="all">
+
+<div id="redBlock">左侧</div>
+<div id="blueBlock">右侧</div>
+</div>
+
+<div id="greenBlock">信息</div>
+</body>
+</html>
+**/
+
+#main3 #head3 h2{
+	background:url(../img/zxxw.jpg);
+	width:198px;
+	height:37px;
+    position:absolute;
+	margin-top:0;
+	
+}
+#main3 #foot3 h2{
+	background:url(../img/rdxw.jpg);
+	width:198px;
+	height:37px;
+    position:absolute;
+	margin-top:0;
+	
+}
+#main #allcontent{
+	width:580px;
+	float:left;
+	background:#FFF;
+}
+#main #allcontent #dh{
+	height: 25px;
+	border: 2px dashed #5abcec;
+	background:url(../img/tubiao.jpg) no-repeat 3px 3px;
+}
+#main #allcontent #dh a{
+	 color: black;
+   
+    line-height: 25px;
+    text-indent: 20px;
+	
+}
+#main #allcontent #nr{
+	background-color: rgb(245, 242, 234);
+    color: black;
+    line-height: 29px;
+    padding: 15px;
+    width: 550px;
+}
+#main #allcontent #lb{
+	background:rgb(245, 242, 234);
+	width:580px;
+	border: 1px solid rgb(76, 180, 231);
+}
+#main #allcontent #lb li{
+	height: 30px;
+    line-height: 30px;
+    text-indent: 22px;
+	background:url(../img/lbfh.png) no-repeat 4px 4px;
+}
+#main #allcontent #lb li a{
+	color: black;
+    font-family: arial;
+    font-size: 15px;
+	padding-left:5px;
+}
+#main #allcontent #lb li a:hover{
+	text-decoration:underline;
+	color:red;
+}
+

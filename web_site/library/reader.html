@@ -1,0 +1,153 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>借阅管理员</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lendIDAdminster.css">
+    <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
+    <script src="" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+
+<body>
+    <div id="main">
+        <!-- logo部分 -->
+        <div id="header">
+            <embed src="swf/logo.swf" width="100%" style="height: 152px;">
+        </div>
+        <!-- 菜单栏部分 -->
+        <div id="menu">
+            <ul id="alist">
+                <a href="${pageContext.request.contextPath }/index.jsp">
+                    <li class="ali">&nbsp;首&nbsp;页</li>
+                </a>
+                <a href="" title="">
+                    <li class="ali">本馆概况</li>
+                </a>
+                <a href="" title="">
+                    <li class="ali">学术资源</li>
+                </a>
+                <a href="" title="">
+                    <li class="ali">馆长信箱</li>
+                </a>
+                <a href="" title="">
+                    <li class="ali">书香长大</li>
+                </a>
+            </ul>
+            <table align="right">
+                <tbody>
+                    <tr>
+                        <!-- <c:if test="${empty sessionScope.user}">
+                            <td class="login"><a href="javascript:void(0)" onclick="login()">登入</a></td>
+                        </c:if>
+                        <c:if test="${!empty sessionScope.user}">
+                            <td class="login">您好！${sessionScope.user.name }</td>
+                        </c:if>
+                        <td class="search"> 
+                            <a href="${pageContext.request.contextPath }/index.jsp">返回首页</a>
+                        </td>-->
+                        <td class="search">
+                            <a href="${pageContext.request.contextPath }/loginAction_exit.action">注销</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mainBody">
+            <div id="checkpart">
+                <a href="#" title="">
+                    <input type="button" name="" value="个人信息" class="borrow_function" id="readerInfo_btn">
+                </a>
+                <a href="#" title="">
+                    <input type="button" name="" value="已借图书" class="borrow_function" id="readerBook_btn">
+                </a>
+                <a href="#" title="">
+                    <input type="button" name="" value="修改密码" class="borrow_function" id="modifyPwd_btn">
+                </a>
+            </div>
+            <!--密码修改-->
+            <div id="modifyPwd" class="handleID">
+                <form action="" method="post" accept-charset="utf-8">
+                    <p> 原&nbsp;密&nbsp;码&nbsp;：
+                        <input type="text">
+                    </p>
+                    <p> 新&nbsp;密&nbsp;码&nbsp;：
+                        <input type="text" name="userName">
+                    </p>
+                    <p>
+                        <input type="button" name="" value="确定" class="sbtn" >
+                    </p>
+                </form>
+            </div>
+            <!--读者信息显示-->
+            <div id="readerinfo" class="handleID">
+                <p> 借书证编号：
+                    <label>000000000</label>
+                </p>
+                <p> &nbsp;姓&nbsp;名：
+                    <input type="text" name="userName">
+                </p>
+                <p> &nbsp;性&nbsp;别：
+                    <input type="checkbox" name="sex" value="male">男 &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="sex" value="female">女
+                </p>
+                <p> 所在单位：
+                    <input type="text" name="">
+                </p>
+                <p> 办证日期：
+                    <input type="text" name="" id="dateValue">
+                </p>
+                <p> 借书证状态：
+                    <label>有效</label>
+                </p>
+                <p>照片：</p>
+            </div>
+           <!-- 已借图书 -->
+            <div id="readerBook" class="handleID">
+                <table id="resultTable" style="border: 1px solid black">
+                    <caption><h2>借阅情况</h2></caption>
+                    <thead  border="1" align="center">
+                        <tr>
+                            <th>序号</th>
+                            <th>书名</th>
+                            <th>还书日期</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>三国演义</td>
+                            <td><a href="${pageContext.request.contextPath }/book_findmodify.action">续借</a></td>
+                            <td><a href="${pageContext.request.contextPath }/book_findmodify.action">归还</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 下角标部分 -->
+        <div class="footer">
+            <p><span><a href="#">copyright@郭庆兴</a></span></p>
+            <p><a href="#">联系方式：135*********</a></p>
+            <p><a href="#">官方微信：******</a></p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $('#readerInfo_btn').click(function() {
+        $('#readerinfo').css('display', 'block');
+        $('#readerBook').css('display', 'none');
+        $('#modifyPwd').css('display', 'none');
+    });
+    $('#readerBook_btn').click(function() {
+        $('#readerinfo').css('display', 'none');
+        $('#readerBook').css('display', 'block');
+        $('#modifyPwd').css('display', 'none');
+    });
+    $('#modifyPwd_btn').click(function() {
+        $('#readerinfo').css('display', 'none');
+        $('#readerBook').css('display', 'none');
+        $('#modifyPwd').css('display', 'block');
+    });
+    alert(parseInt("2dd"));
+    </script>
+</body>
+
+</html>

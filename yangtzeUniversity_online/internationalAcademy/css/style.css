@@ -1,0 +1,465 @@
+/*
+   应该注意代码写的独立成行，便于观看
+   */
+body,li,h1,h2,div,img,ul,p{margin:0px;padding:0px;}
+h1 img{
+	border:0px;
+}
+/*
+  在IE7中若不设置会有border边界。
+   
+*/
+div{
+	margin:0 auto;
+}
+li{
+  list-style:none;
+  }
+a{
+    text-decoration:none;
+	}
+ul li{height:28px;
+	 line-height:28px;
+	 font-size:14px;
+	 font-family:宋体;}
+ul li a{
+	color:#414141;
+	}
+ul li a:hover{
+	color:#FF1111;
+	}
+#all{width:1020px;
+      height:1250px;
+	  margin:0 auto;
+	  background:#FFF
+	  }
+#top{width:100%;
+     height:152px;
+	 background:url(../img/1.1.png);
+	 position:relative;
+	 }
+#top ul li{float:right;
+            list-style:none;
+			margin-right:25px;
+			margin-top:1px;
+			text-decoration:none;
+			font-size:15px;
+	        font-family:宋体;
+	       margin-left:10px; 
+		   }
+#top a{
+	text-decoration:none;
+	}
+#topright{
+	        position:absolute;
+			bottom:0;
+			right:20px;
+}
+/*
+  1.设置导航栏的时候，应注意hover对应的标签，是a标签，还是li标签；
+  2.font-weight：设置显示元素的文本中所用的字体加粗；normal 默认值。定义标准的字符-bold 粗体字符；bolder 更粗的字符；lighter 更细的字符。
+  
+*/  
+#nav{height:45px;
+     width:1020px;
+     background:url(../img/nav.gif) no-repeat;
+	 }
+#nav ul li{float:left;
+	  width:89px;
+	  height:45px;
+	 line-height:45px;
+	  text-align:center;
+	  font-size:18px;
+	  font-weight:bold;
+	  margin-left:16px;
+}
+#nav #list{
+	width:56px;
+	height:45px;
+	text-indent:5px;
+	background:none;
+	}
+#nav ul #list:hover{
+	background:url(../img/nav.png) 2px center no-repeat;
+	}
+#nav ul li:hover{
+	background:url(../img/nav.png) 2px center no-repeat;
+	}
+#nav ul a{
+	color:#1F417E;
+}
+#nav ul a:hover{
+	color:#1F417E;
+}
+	  
+#picture{
+	width:100%;
+	height:160px;
+	background:url(../img/3.png);
+	}
+	/*
+	设置main这个div的时候，没有注意整体布局，各个小div的高和宽和容易出错。
+    所以应提前有个完整且合理的布局思路。把宽和高各部分提前划分出来。
+	main的高度和left的高度会影响下方bottom的向上移动，所以设置时要格外细心。
+	*/
+#main{
+	width:985px;
+	height:668px;
+	background:#FFF;
+	margin:0 auto;
+	position:relative;
+	}
+	/*
+	auto 自动居中
+	*/
+#main #left{
+	height:665px;
+    width:722px;
+	background:#FFF;
+	float:left;
+	}
+#main #left #main1{
+	float:left;
+	height:218px;
+	width:336px;
+	}
+#main1 span{
+	width:345px;
+	height:40px;
+	line-height:40px;
+	text-indent:17px;
+	font-size:24px;
+	font-family:宋体;
+	color:#666666;
+	}
+
+#main2{
+	width:380px;
+	height:269px;
+	float:right;
+	}
+#main2 li{
+	list-style:none;
+	}
+#main2 li a{
+	text-decoration:none;
+	}
+#main2 h1{
+	width:380px;
+	height:39px;
+	background:url(../img/zxdt.gif);
+	border-bottom:2px solid #666666;
+	position:relative;
+	}
+	/*
+	绝对定位于相对定位是个可以准确定位的方法。
+	*/
+	/*
+	直接对图片操作  可用img；
+     可直接对图片位置进行控制，
+    如main2中”background:url(img/6.png) 10px center“ 左边距10像素，高度剧中； 
+	*/
+#main2 h1 img{
+	position:absolute;
+	top:18px;
+	right:10px;
+	}
+ 
+ #main2 #new ul{
+	 padding-top: 10px;
+ }
+	
+#main2 #new ul li{
+	height:28px;
+    line-height:28px;
+	font-size:14px;
+	font-family:宋体;
+	background:url(../img/6.png) 10px center ;
+	text-indent:30px;
+	position:relative;
+	border-bottom:1px dashed #E1E1E1;
+	} 
+#main2 #new span{
+	position:absolute;
+	top:0px;
+	right:10px;
+	}
+
+#main3{
+	width:345px;
+	height:245px;
+	float:left;
+	}
+#main3 li{
+	list-style:none;
+	}
+#main3 li a{
+	text-decoration:none;
+	}
+#main3 h1{
+	width:355px;
+	height:39px;
+	background:url(../img/zsxx.gif) no-repeat;
+	
+	position:relative;
+	}
+#main3 h1 img{
+	position:absolute;
+	top:10px;
+	right:10px;
+	}
+
+#main3 #new ul li{
+	height:28px;
+	line-height:28px;
+	font-size:14px;
+	font-family:宋体;
+	background:url(../img/66.png) 10px center ;
+	text-indent:30px;
+	position:relative;
+	border-bottom:1px dashed #E1E1E1;
+	}
+#main3 h1 span{
+	font-size:20px;
+	font-family:宋体;
+	margin-left:28.3px;
+	color:#FFFFFF;
+	line-height:36.2px;
+	
+	}	
+#main3 #new span{
+	position:absolute;
+	top:0px;
+	right:10px;
+	}
+#main3 #new ul li{
+	background:url(../img/landian.gif) 13px no-repeat;
+	}
+
+#main4{
+	width:353px;
+	height:245px;
+	float:right;
+	}
+#main4 li{
+	list-style:none;
+	}
+#main4 li a{
+	text-decoration:none;
+	}
+#main4 h1{
+	width:355px;
+	height:39px;
+	background:url(../img/cglx.gif) no-repeat;
+	
+	position:relative;
+	}
+#main4 h1 span{
+	font-size:20px;
+	font-family:宋体;
+	margin-left:29.6px;
+	color:#FFFFFF;
+	line-height:37.8px;
+	
+	}
+#main4 h1 img{
+	position:absolute;
+	top:10px;
+	right:10px;
+	}
+#main4 #new ul li{
+	height:28px;
+	line-height:28px;
+	font-size:14px;
+	font-family:宋体;
+	background:url(../img/66.png) 10px center ;
+	text-indent:30px;
+	position:relative;
+	border-bottom:1px dashed #E1E1E1;
+	}
+#main4 #new ul li{
+	background:url(../img/landian.gif) 10px no-repeat;
+	} 
+#main4 #new span{
+	position:absolute;
+	top:0px;
+	right:13px;
+	}
+ 
+/*
+   overflow的作用
+   visible 	内容不会被修剪，会呈现在元素框之外。
+   hidden 	内容会被修剪，但是浏览器不会显示供查看内容的滚动条。
+   scroll 	内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+   auto 	由浏览器决定如何显示。如果需要，则显示滚动条。
+   
+   如果在此处将hidden改为visible，，将不会滚动。
+    */
+#main5{			
+		margin-top: 12px;  
+		background: #FFF; 
+		overflow:hidden; 
+		border: 2px solid #CCC; 
+		width:710px;height: 137px;
+		margin-bottom:20px;
+		} 
+		
+		#main5 img {
+			       border: 1px solid #F2F2F2;
+		           height: 120px;
+				   } 
+		#main5 #indemo {
+			width: 800%;
+			margin-top:5px;
+			} 
+		#indemo,#demo1,#demo2{
+			float: left;
+			} 
+
+#main #right{
+	height:600px;
+	width:252px;
+	background:url(../img/13.png) repeat-y;
+	float:right;
+	border: 1px solid #d6d6d6;
+	}	
+
+#righttop{width:100%;
+          height:400px;
+		  position:relative;
+		  }
+#righttop li a{text-decoration:none;}
+#righttop li{list-style:none;
+             border-bottom:1px dashed #d2d2d2;}
+#righttop h1{width:100%;
+              height:39px;background:url(../img/tzgg.gif);
+			  padding-top:10px;
+			  position:relative;
+			  float:left;
+			  }
+#righttop h2{
+	         position:absolute;
+			 top:0;
+			 left:5px;
+             }
+#righttop ul li a{
+    color:#10406F;
+	}
+#righttop ul{
+	padding-top:48px;
+}	
+#righttop ul li a:hover{
+                         color:#FF1111;
+	                     }
+#righttop h1 img{position:absolute;
+                  top:15px;
+				  right:10px;
+				  }
+#righttop #new ul li{height:28px;
+                     line-height:28px;
+					 background:url(../img/ludian.gif) no-repeat 8px center;
+					 font-size:14px;
+					 font-family:宋体;
+					 text-indent:1.5em;
+					 position:relative;
+					 } 
+
+#rightbottom{width:100%;
+               height:190px;
+			   }
+#rightbottom li a{text-decoration:none;}
+#rightbottom li{list-style:none;}
+
+#rightbottom h1{width:100%;
+                 height:39px;
+				 background:url(../img/yqlj.gif) no-repeat;
+				
+				 position:relative;
+				 }
+#rightbottom h1 img{position:absolute;   
+                     top:15px;
+					 right:10px;
+					 }
+#rightbottom ul li a{
+               color:#10406F;
+			   }
+#rightbottom ul{
+	             padding-top:7px;
+                }
+#rightbottom #new{
+	                height:148px;
+					width:255px;
+					
+                 }
+#rightbottom #new ul li{
+                         line-height:22px;
+						 font-size:13px;
+						 font-family:宋体;
+						 text-align:center;
+						 position:relative;
+						 }
+
+
+#main #edu{
+	height:52px;
+	width:255px;
+	background:#FFFFFF;
+	position:absolute;
+	bottom:10px;
+	right:0;
+	}
+	/*
+	  绝对定位与相对定位虽然可以简单的设置对象的位置，但后期调试的时候
+	  会有严重的干扰作用，所以要谨慎使用
+	  */
+#edu a img{
+	width:254px;
+	height:53px;
+	border:0;
+	margin-top:10px;
+	}
+#bottom{
+	width:1020px;
+	height:90px;
+	background-image:url(../img/4.png);
+	
+	border-top:5px solid #666666;
+	}
+#bottom #bottomleft{
+	width:710px;
+	height:90px;
+	float:left;
+	}
+#bottom #bottomright{
+	width:300px;
+	height:90px;
+	float:right;
+	}
+#bottomleft p{
+	height:25px;
+	line-height:25px;
+	font-size:16px;
+	font-family:宋体;
+	text-indent:168px;
+	}
+#bottomleft p a{
+	color:black;
+	text-decoration:none;
+	}
+#bottomleft .copy{
+	padding-top:12px;
+	}
+#bottomright{
+	width:300px;
+	height:90px;
+	}
+#bottomright p{
+	height:25px;
+	line-height:25px;
+	font-size:16px;
+	font-family:宋体;
+	text-indent:55px;
+	}
+#bottomright .ad{
+	padding-top:12px;
+	}

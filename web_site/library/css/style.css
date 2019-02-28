@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: '微软雅黑';
+    border: none;
+}
+
+#main {
+    width: 1350px;
+    margin: auto;
+}
+
+#header {
+    width: 100%;
+    height: 160px;
+}
+
+#menu {
+    height: 50px;
+    width: 100%;
+    background: #089cef;
+    margin-top: 10px;
+}
+
+#menu ul {
+    margin-left: 100px;
+}
+
+#menu ul li {
+    float: left;
+    width: 150px;
+    height: 50px;
+    list-style: none;
+    line-height: 50px;
+    text-align: center;
+}
+
+#menu ul a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu ul a:hover {
+    color: orange;
+}
+
+#menu ul a:hover li {
+    background: #2db354;
+}
+
+table {
+    height: 50px;
+    width: 400px;
+}
+
+.login a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.search {
+    vertical-align: middle;
+    font-size: 16px;
+    padding-left: 50px;
+}
+
+.searchpic {
+    background: url(../img/search.png);
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.search input {
+    height: 35px;
+    font-size: 16px;
+}
+
+
+/*处理图片轮播*/
+
+#top {
+    margin: 10px auto;
+    background: background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    border: 1px solid #666;
+    overflow: hidden;
+    border: none;
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+}
+
+#banner_bg {
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    height: 30px;
+    filter: Alpha(Opacity=30);
+    opacity: 0.3;
+    z-index: 5;
+    cursor: pointer;
+    width: 120px;
+}
+
+#banner_info {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    line-height: 30px;
+    color: #fff;
+    z-index: 5;
+}
+
+#banner_text {
+    position: absolute;
+    width: 120px;
+    z-index: 1002;
+    right: 3px;
+    bottom: 3px;
+}
+
+#banner ul {
+    position: absolute;
+    list-style-type: none;
+    filter: Alpha(Opacity=75);
+    opacity: 0.75;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+    bottom: 3px;
+    right: 5px;
+}
+
+#banner ul li {
+    padding: 0px 8px;
+    float: left;
+    display: block;
+    color: #FFF;
+    border: #fff 1px solid;
+    background-color: #6f4f67;
+    cursor: pointer
+}
+
+#banner_list {
+    width: 100%;
+    height: 600px;
+    margin: auto;
+}
+
+#banner ul li.on {
+    background-color: #900
+}
+
+#banner_list a {
+    position: absolute;
+}
+
+#banner_list img {
+    width: 100%;
+    height: 100%;
+}
+
+#list {
+    width: 300px;
+    height: 45px;
+}
+
+#banner #list li {
+    width: 50px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+
+/*中间的信息部分*/
+
+.left {
+    float: left;
+    height: 528px;
+    width: 200px;
+    background: #5a4150;
+}
+
+.left li {
+    height: 130px;
+    width: 200px;
+    line-height: 140px;
+    text-align: center;
+    list-style: none;
+    font-size: 25px;
+    border: 1px solid black;
+    color: white;
+}
+
+.active {
+    background: #ff2832;
+}
+
+#div1 {
+    display: inline;
+    border: 2px solid grey;
+    margin-left: 10px;
+    float: left;
+    width: 1134px;
+    height: 528px;
+}
+
+#div2,
+#div3,
+#div4 {
+    display: none;
+    border: 2px solid grey;
+    margin-left: 10px;
+    float: left;
+    width: 1134px;
+    height: 528px;
+}
+
+.right h2 {
+    float: left;
+    line-height: 50px;
+    height: 50px;
+}
+
+.icon {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    float: left;
+    height: 37px;
+}
+
+.more {
+    float: right;
+    line-height: 50px;
+    height: 50px;
+    color: orange;
+    margin-right: 40px;
+}
+
+.content {
+    float: left;
+    width: 1134px;
+    border-top: 1px solid grey;
+}
+
+.content li {
+    background: url(../img/fh.jpg) no-repeat 5px 12px;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    padding-left: 30px;
+    border-bottom: 1px dotted black;
+    color: black;
+}
+
+.content a {
+    text-decoration: none;
+}
+
+.content li:hover {
+    color: orange;
+}
+
+.content .date {
+    float: right;
+    padding-right: 20px;
+}
+
+
+/*图书分类展示*/
+
+.bookClassfy {
+    border-top: 1px solid grey;
+    float: left;
+    width: 1134px;
+    padding-top: 10px;
+}
+
+.book {
+    float: left;
+    width: 100%;
+}
+
+.bookstyle li {
+    float: left;
+    list-style: none;
+    height: 150px;
+    width: 255px;
+    text-align: center;
+}
+
+.bookstyle li:hover {
+    color: green;
+}
+
+.bookstyle img:hover {
+    transform: scale(1.2);
+}
+
+
+/*页脚部分*/
+
+.footer {
+    background: #333 none repeat scroll 0 0;
+    width: 100%;
+    height: 100px;
+    clear: both;
+}
+
+.footer p {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: orange;
+}
+
+
+/*
+处理登入的css
+ */
+
+body {
+    overflow: scroll;
+}
+
+.black_overlay {
+    display: none;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+.white_content {
+    display: none;
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    height: 35%;
+    padding: 18px;
+    border: 5px solid #089CEF;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+    font-size: 33px;
+}
+
+center {
+    margin-top: 50px;
+}
+
+#light input {
+    height: 30px;
+    vertical-align: middle;
+    width: 200px;
+    font-size: 15px;
+    border: 1px solid black;
+}
+
+#light p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#light .sobtn {
+    width: 20%;
+}
+#light #code{
+    width: 20%;
+}
+
+
+/*处理借书证管理员页面的css*/
+
+.mainBody {
+    width: 1350px;
+    height: 605px;
+    background: url(../img/yubg.jpg) repeat;
+    margin: 10px 0px;
+}
+
+#checkpart {
+    width: 1010px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    font-size: 18px;
+    border-bottom: 1px dotted grey;
+}
+
+#checkpart input {
+    font-size: 17px;
+}
+
+.subtn {
+    margin-left: 30px;
+    width: 70px;
+    height: 30px;
+    background: green;
+    color: white;
+}
+
+.handleID {
+    width: 100%;
+    display: none;
+}
+
+.handleID p {
+    height: 40px;
+    line-height: 50px;
+    width: 360px;
+    margin: auto;
+    font-size: 16px;
+}
+
+.handleID input {
+    font-size: 16px;
+}
+
+#photo {
+    height: 40px;
+    line-height: 50px;
+    width: 360px;
+    margin: auto;
+    font-size: 16px;
+}
+
+#photo input {
+    width: 260px;
+}
+
+.am-g {
+    width: 100px;
+    height: 150px;
+    border: 1px solid grey;
+    margin: auto;
+}
+
+.sbtn {
+    width: 120px;
+    height: 40px;
+    background: green;
+    color: white;
+    margin-left: 115px;
+}
+
+
+#islost {
+    background: green;
+    width: 80px;
+    height: 30px;
+    color: white;
+}
+
+#checkpart a{
+    text-decoration: none;
+}
+
+.functionbtn{
+    width: 100px;
+    height: 40px;
+    margin-left: 120px;
+    background: green;
+    color: white;
+}
+
+
+
+/*借阅管理页面*/
+.borrow_function{
+    width: 100px;
+    height: 40px;
+    margin-left: 160px;
+    background: green;
+    color: white;
+}
+
+#resultTable{
+    width: 100%;
+}
+#resultTable td,th{
+    text-align: center;
+    border: 1px solid grey;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+}
+
+/**/
+#menu_function{
+    margin: auto; width: 400px;
+}
+#readerInfo_btn{
+    height: 35px;
+    font-size: 16px;
+}
+#readerInfo_btn{
+    margin-left: 60px;
+    text-align: center;
+    background: green;
+    color: white;
+    width: 120px;
+}
+#readerInfo_text{
+    height: 35px;
+}

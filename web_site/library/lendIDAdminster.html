@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>借书证管理员</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lendIDAdminster.css">
+    <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
+    <script src="js/most.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+
+<body>
+    <div id="main">
+        <!-- logo部分 -->
+        <div id="header">
+            <embed src="swf/logo.swf" width="100%" style="height: 152px;">
+        </div>
+        <!-- 菜单栏部分 -->
+        <div id="menu">
+            <ul id="alist">
+                <a href="" title="">
+                    <li class="ali">&nbsp;首&nbsp;页</li>
+                </a>
+                <a href="" title="">
+                    <li class="ali">本馆概况</li>
+                </a>
+                <a href="" title="">
+                    <li class="ali">学术资源</li>
+                </a>
+                <a href="" title="">
+                    <li class="ali">馆长信箱</li>
+                </a>
+                <a href="" title="">
+                    <li class="ali">书香长大</li>
+                </a>
+            </ul>
+            <table align="right">
+                <tbody>
+                    <tr>
+                        <td class="login"><a href="javascript:void(0)" onclick="login()">登入</a></td>
+                        <td class="search">
+                            <form action="SqlWork" method="psot" accept-charset="utf-8">
+                                <label>站内搜索：</label>
+                                <input type="text" name="search">
+                                <input type="submit" name="" class="searchpic" value="">
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mainBody">
+            <div id="checkpart">
+                <form action="#" method="get" accept-charset="utf-8">
+                    &nbsp;姓&nbsp;名：
+                    <input type="text" name="userName"> 所在单位：
+                    <input type="text" name=""> 类型：
+                    <select name="userType" style=" BORDER-BOTTOM: #808080 1px solid; BORDER-RIGHT-WIDTH: 1px; WIDTH: 150px; BORDER-TOP-WIDTH: 1px; COLOR: #5d91c0; FONT-SIZE: 14pt; BORDER-LEFT-WIDTH: 1px">
+                        <option value="student" selected="selected">学生</option>
+                        <option value="teacher">教师</option>
+                    </select>
+                    <input type="submit" name="" value="查询" class="subtn" id="checkbtn">
+                    <input type="button" name="" value="注册" class="subtn" id="handbtn">
+                </form>
+            </div>
+            <!-- 假设查询到的结果 -->
+            <div id="result" class="handleID">
+                <p> 借书证编号：
+                    <label>000000000</label>
+                </p>
+                <p> &nbsp;姓&nbsp;名：
+                    <input type="text" name="userName">
+                </p>
+                <p> &nbsp;性&nbsp;别：
+                    <input type="checkbox" name="sex" value="male">男 &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="sex" value="female">女
+                </p>
+                <p> 所在单位：
+                    <input type="text" name="">
+                </p>
+                <p> 办证日期：
+                    <input type="text" name="" id="dateValue">
+                </p>
+                <p> 借书证状态：
+                    <label>有效</label>
+                    <input type="button" name="" value="挂失/解除" id="islost">
+                </p>
+                <p>照片：</p>
+                <div class='am-g'>
+                </div>
+                <p>
+                    <input type="button" name="" value="修改" class="sbtn" id="modifybtn">
+                </p>
+            </div>
+            <!-- 办理借书证的div -->
+            <div id="handleID" class="handleID">
+                <form action="" method="get" accept-charset="utf-8">
+                    <p> &nbsp;姓&nbsp;名：
+                        <input type="text" name="userName">
+                    </p>
+                    <p> &nbsp;性&nbsp;别：
+                        <input type="checkbox" name="sex" value="male">男 &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" name="sex" value="female">女
+                    </p>
+                    <p> 所在单位：
+                        <input type="text" name="">
+                    </p>
+                    <p> 办证日期：
+                        <input type="text" name="" id="dateValue">
+                    </p>
+                    <div id="photo">
+                        照片：
+                        <input id="photobtn" type="file" name="">
+                    </div>
+                    <p>
+                        <div class='am-g' id="photoimg">
+                            <img id="preview" alt="" width="100" height="150">
+                        </div>
+                    </p>
+                    <p>
+                        <input type="submit" name="" value="提交" class="sbtn">
+                    </p>
+                </form>
+            </div>
+            <!-- 借书证修改的div -->
+            <div id="modifyID" class="handleID">
+                <form action="${pageContext.request.contextPath }/handleRd_Add.action" method="post" enctype="multipart/form-data">
+                    <p> &nbsp;姓&nbsp;名：
+                        <input type="text" name="reader.rdName">
+                    </p>
+                    <p>
+                        &nbsp;密 &nbsp;码：
+                        <input type="text" name="reader.rdPwd">
+                    </p>
+                    <p> &nbsp;性&nbsp;别：
+                        <input type="checkbox" name="reader.rdSex" value="男">男 &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" name="reader.rdSex" value="女">女
+                    </p>
+                    <p> &nbsp;手&nbsp;机：
+                        <input type="text" name="reader.rdphone">
+                    </p>
+                    <p> 所在单位：
+                        <input type="text" name="reader.rdDept">
+                    </p>
+                    <p>&nbsp;类&nbsp;型：
+                        <select name="reader.rdType" style=" BORDER-BOTTOM: #808080 1px solid; BORDER-RIGHT-WIDTH: 1px; WIDTH: 150px; BORDER-TOP-WIDTH: 1px; COLOR: #5d91c0; FONT-SIZE: 14pt; BORDER-LEFT-WIDTH: 1px">
+                            <option value="2" selected="selected">本科生</option>
+                            <option value="1">教师</option>
+                            <option value="3">专科生</option>
+                            <option value="4">硕士研究生</option>
+                            <option value="5">博士研究生</option>
+                        </select>
+                        <input type="submit" name="" value="提交" class="sbtn">
+                    </p>
+                </form>
+            </div>
+        </div>
+        <!-- 下角标部分 -->
+        <div class="footer">
+            <p><span><a href="#">copyright@郭庆兴</a></span></p>
+            <p><a href="#">联系方式：135*********</a></p>
+            <p><a href="#">官方微信：******</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
